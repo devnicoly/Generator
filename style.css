@@ -1,140 +1,158 @@
 *{
-    font-family: sans-serif;
-    width: 100%;
-    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body{
-
-    background-color: #8fc8ee;
+    background-color: #0e0f18;
     width: 100%;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
 }
 
-.logo{
-    max-width: 500px;
-    margin-bottom: 24px;
+.titulo{
+    font-size: 42px;
+    font-weight: 700;
+    color: #3e6186;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
 
+h2{
+    font-size: 24px;
+    font-weight: 600;
+    color: #2a63a0;
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 .container-input{
-
     max-width: 480px;
-    margin: 14px 0;
-
-}
-
-.container-input span{
-    color: black;
-    font-size: 22px;
-}
-
-.slider{
-    -webkit-appearance: none;
     width: 100%;
-    border-radius: 10px;
-    background: #d1ebfc;
-    height: 18px;
-    outline: none;
-    margin-top: 8px;
+    margin: 14px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.container-input label,
+.container-input span{
+    color: #316cac;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 12px;
+}
+
+.input-numero{
+    width: 100px;
+    height: 40px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2e3a42;
+    color: #83a6ca;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    outline: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.input-numero:focus{
+    transform: scale(1.05);
+    box-shadow: 0 0 0 3px rgba(26, 58, 92, 0.2);
 }
 
 .button-cta{
-
-    height: 40px;
-    background-color: #d1ebfc;
+    width: 100%;
+    height: 48px;
+    background-color: #2e3a42;
     border: 0;
-    transition: transform 0.5s;
+    transition: transform 0.5s, background-color 0.3s;
     border-radius: 8px;
     cursor: pointer;
-    margin-top: 40px;
-    color: #000000;
-    font-weight: bold;
-    font-size: 15px;
-
+    margin-top: 32px;
+    color: #83a6ca;
+    font-weight: 700;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .button-cta:hover{
-
     transform: scale(1.05);
+    background-color: #b8dff8;
 }
 
 .container-password{
-
     max-width: 480px;
+    width: 100%;
     margin: 14px 0;
     display: flex;
     align-items: center;
     flex-direction: column;
-    cursor: pointer;
-
 }
 
 .title{
-
     text-align: center;
-    font-size: 28px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2a63a0;
     margin-top: 24px;
     margin-bottom: 8px;
-
 }
 
 .password{
-
+    width: 100%;
     height: 60px;
-    background-color: #99d1f7;
+    background-color: #2e3a42;
     border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-
-
+    font-size: 18px;
+    font-weight: 600;
+    color: #83a6ca;
+    word-break: break-all;
+    padding: 0 12px;
 }
 
-
-.tooltip{
-
-    color: #6d006d;
-    font-weight: bold;
-    position: relative;
-    top: 20px;
-    padding: 6px 8px;
-    background-color: #d1ebfc;
-    border-radius: 8px;
-    transition: transform 0.5s;
-    text-align: center;
-    font-size: 16px;
+.copy-button{
+    margin-top: 12px;
+    padding: 8px 24px;
+    border: none;
     border-radius: 6px;
-    visibility: hidden;
+    background-color: #2e3a42;
+    color: #83a6ca;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
     opacity: 0;
-    transition: all 0.5s ease-in-out;
+    transform: scale(0.8);
+    transition: transform 0.5s, opacity 0.5s, background-color 0.3s;
+}
 
+.container-password:not(.hide) .copy-button{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.copy-button:hover{
+    background-color: #2e3a42;
+    transform: scale(1.05);
 }
 
 .hide{
-
     display: none;
 }
-
-.tooltip:hover{
-
-    transform: scale(1.05);
-    
-}
-
-.container-password:hover .tooltip{
-
-    visibility: visible;
-    bottom: 50px;
-    opacity: 1;
-    
-}
-
