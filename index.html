@@ -15,36 +15,53 @@
 
 <body>
 
-    <h1 class="titulo">PASSWORD GENERATOR</h1>
-    <h2>Generate strong and secure passwords. Choose the length and click "GENERATE".</h2>
+    <h1 class="titulo">CUTE PASSWORD GENERATOR</h1>
+    <h2>Generate strong and secure passwords. Choose the type, set the options, and click "GENERATE".</h2>
 
     <main class="container-input">
 
-        <label for="tamanho"> Length: </label>
-        <input 
-            id="tamanho" 
-            class="input-numero" 
-            type="number" 
-            min="5" 
-            max="50" 
-            value="5" 
-        />
-        <span> characters </span>
+        <!-- Seletor de tipo de senha -->
+        <div class="form-row">
+            <label for="tipo-senha">Type</label>
+            <select id="tipo-senha" class="input-select">
+                <option value="geral">General password</option>
+                <option value="cartao">Credit card password</option>
+            </select>
+        </div>
+
+        <!-- Grupo: senha geral (tamanho) -->
+        <div id="grupo-tamanho" class="form-row">
+            <label for="tamanho">Length:</label>
+            <input
+                id="tamanho"
+                class="input-numero"
+                type="number"
+                min="5"
+                max="50"
+                value="12"
+            />
+            <span>characters</span>
+        </div>
+
+        <!-- Grupo: senha de cartão (4 ou 6 dígitos) -->
+        <div id="grupo-cartao" class="form-row hide">
+            <label for="digitos-cartao">Digits:</label>
+            <select id="digitos-cartao" class="input-select input-select-small">
+                <option value="4">4 digits</option>
+                <option value="6">6 digits</option>
+            </select>
+        </div>
 
         <button id="button" class="button-cta">Generate</button>
     </main>
 
     <div id="container-password" class="container-password hide">
-
-        <span class="title"> Your password is: </span>
+        <span class="title">Your password is:</span>
         <span id="password" class="password"></span>
-
         <button id="copy-button" class="copy-button">Copy</button>
-
     </div>
 
     <script src="script.js" defer></script>
 
 </body>
-
 </html>
